@@ -1,10 +1,10 @@
 meta:
   id: boss_metadata
-  endian: le
+  endian: be
   imports:
     - links
     - timestamp
-    - /common/vlq_base128_le
+    - /common/vlq_base128_be
 
 seq:
   - id: len
@@ -27,7 +27,7 @@ seq:
     type: str
     size: 0x78
     terminator: 0
-    encoding: UTF-16LE
+    encoding: UTF-16BE
 
   - id: unknown
     size: 0x8
@@ -40,11 +40,11 @@ seq:
   - id: vid_desc
     type: str
     terminator: 0
-    encoding: UTF-16LE
+    encoding: UTF-16BE
     doc: UTF-16 video description string payload
 
   - id: moflex_size
-    type: vlq_base128_le
+    type: vlq_base128_be
     if: not _io.eof
 
   - id: moflex_data
@@ -52,7 +52,7 @@ seq:
     if: not _io.eof
 
   - id: thumbnail_size
-    type: vlq_base128_le
+    type: vlq_base128_be
     if: not _io.eof
     doc: Size identifier tag driving the JPEG image asset slice
 
