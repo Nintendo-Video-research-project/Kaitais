@@ -1,6 +1,6 @@
 meta:
   id: timestamp
-  endian: be
+  endian: le
 
 seq:
   - id: release_date
