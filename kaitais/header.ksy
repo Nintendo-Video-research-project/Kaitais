@@ -1,6 +1,6 @@
 meta:
   id: boss_header
-  endian: be
+  endian: le
 seq:
   - id: magic
     type: u4
