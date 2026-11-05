@@ -1,6 +1,6 @@
 meta:
   id: boss_metadata
-  endian: be
+  endian: le
   imports:
     - links
     - timestamp
