@@ -1,6 +1,6 @@
 meta:
   id: links
-  endian: be
+  endian: le
 seq:
   - id: meta_len
     type: u4
